@@ -1,0 +1,29 @@
+/* Polices */
+
+@import url('https://fonts.googleapis.com/css2?family=Shrikhand&display=swap');
+
+/* Base Settings */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+#block_page {
+    max-width: 2560px;
+}
+
+.section {
+    background-color: $color-background;
+}

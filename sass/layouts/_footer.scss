@@ -1,0 +1,35 @@
+footer {
+    background-color: #353535;
+    padding: 25px 0px 25px 0px;
+    width: 100%;
+}
+
+footer li {
+    display: flex;
+    margin: 0 0 10px 20px;
+    color: #FFF;
+    font-weight: normal;
+}
+
+footer a {
+    text-decoration: none;
+    color: #FFF;
+
+    &:hover {
+        color: #FF79DA;
+    }
+}
+
+footer .titre {
+    font-family: "Shrikhand", cursive;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.fa-utensils {
+    padding-right: 13px;
+}
+
+.fa-handshake-angle {
+    padding-right: 8px;
+}

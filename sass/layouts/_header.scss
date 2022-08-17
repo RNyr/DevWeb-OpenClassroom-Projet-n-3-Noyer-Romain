@@ -1,0 +1,20 @@
+/* Start Header */
+
+header {
+    width: 100%;
+    box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+    padding: 20px 0px 12px 0px;
+    position: relative;
+}
+
+header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo img {
+    width: 180px;
+}
+
+/* End Header */

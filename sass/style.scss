@@ -1,5 +1,6 @@
 @import "./utils/variables";
-
-* {
-    box-sizing: border-box;
-}
+@import "./base/base";
+@import "./layouts/header";
+@import "./pages/index";
+@import "./pages/menu";
+@import "./layouts/footer";

@@ -1,0 +1,124 @@
+/* Start Localisation */
+
+.localisation {
+    display: flex;
+    justify-content: center;
+    background-color: #eaeaea;
+    padding: 16px 0px 16px 0px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.fa-location-dot {
+    padding-right: 18px;
+}
+
+/* End Localisation */
+
+/* Start Accueil */
+
+.accueil {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: $color-background;
+    padding: 40px;
+    margin-bottom: 50px;
+}
+
+.accueil__titre {
+    margin-bottom: 10px;
+}
+
+.accueil h1 {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.accueil a {
+    border-radius: 30px;
+    color: #FFF;
+    font-size: 15px;
+    background-color: $color-primary;
+    box-shadow: 0em 0.25em 1em rgba(0, 0, 0, 0.25);
+    padding: 1em 1.5em 1em 1.5em;
+    margin: auto;
+
+    &:hover {
+        box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
+    }
+}
+
+/* End Acceuil */
+
+/* Start Fonctionnement */
+
+.fonctionnement-titre {
+    margin: 0px 0px 30px 20px;
+}
+
+.fonctionnement {
+    display: flex;
+    flex-flow: wrap;
+    font-size: 15px;
+    padding: 0 15px;
+}
+
+.fonctionnement button {
+    width: 330px;
+    font-weight: bold;
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    border-width: 0px;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+    padding: 30px 50px 30px 18px;
+    margin: 0px 20px 20px 20px;
+
+    &:hover {
+        background-color: #f5edff;
+    }
+
+    &:hover .fa-solid {
+        color: $color-primary;
+    }
+}
+
+.fa-solid {
+    padding-right: 15px;
+}
+
+/* End Fonctionnement */
+
+/* Start Restaurants */
+
+.card {
+    width: 355px;
+    box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+    background-color: #FFF;
+    border-radius: 15px;
+    margin: 10px;
+
+    a {
+        display: block;
+    }
+
+    &__image {
+        width: 355px;
+        height: 100px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+    }
+
+    &__body {}
+
+    &__title {}
+
+    &__heart {}
+}
+
+/* End Restaurants */

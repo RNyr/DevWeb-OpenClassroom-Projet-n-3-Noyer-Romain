@@ -1,3 +1,210 @@
+/* Polices */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+/* Base Settings */
 * {
-  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+#block_page {
+  max-width: 2560px;
+}
+
+.section {
+  background-color: #f6f6f6;
+}
+
+/* Start Header */
+header {
+  width: 100%;
+  -webkit-box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.25);
+  padding: 20px 0px 12px 0px;
+  position: relative;
+}
+
+header .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .logo img {
+  width: 180px;
+}
+
+/* End Header */
+/* Start Localisation */
+.localisation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #eaeaea;
+  padding: 16px 0px 16px 0px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.fa-location-dot {
+  padding-right: 18px;
+}
+
+/* End Localisation */
+/* Start Accueil */
+.accueil {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  background-color: #f6f6f6;
+  padding: 40px;
+  margin-bottom: 50px;
+}
+
+.accueil__titre {
+  margin-bottom: 10px;
+}
+
+.accueil h1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.accueil a {
+  border-radius: 30px;
+  color: #FFF;
+  font-size: 15px;
+  background-color: #9356DC;
+  -webkit-box-shadow: 0em 0.25em 1em rgba(0, 0, 0, 0.25);
+          box-shadow: 0em 0.25em 1em rgba(0, 0, 0, 0.25);
+  padding: 1em 1.5em 1em 1.5em;
+  margin: auto;
+}
+.accueil a:hover {
+  -webkit-box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
+          box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
+}
+
+/* End Acceuil */
+/* Start Fonctionnement */
+.fonctionnement-titre {
+  margin: 0px 0px 30px 20px;
+}
+
+.fonctionnement {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-flow: wrap;
+      flex-flow: wrap;
+  font-size: 15px;
+  padding: 0 15px;
+}
+
+.fonctionnement button {
+  width: 330px;
+  font-weight: bold;
+  background-color: #F6F6F6;
+  border-radius: 20px;
+  border-width: 0px;
+  -webkit-box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+          box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+  padding: 30px 50px 30px 18px;
+  margin: 0px 20px 20px 20px;
+}
+.fonctionnement button:hover {
+  background-color: #f5edff;
+}
+.fonctionnement button:hover .fa-solid {
+  color: #9356DC;
+}
+
+.fa-solid {
+  padding-right: 15px;
+}
+
+/* End Fonctionnement */
+/* Start Restaurants */
+.card {
+  width: 355px;
+  -webkit-box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+          box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
+  background-color: #FFF;
+  border-radius: 15px;
+  margin: 10px;
+}
+.card a {
+  display: block;
+}
+.card__image {
+  width: 355px;
+  height: 100px;
+}
+.card__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/* End Restaurants */
+footer {
+  background-color: #353535;
+  padding: 25px 0px 25px 0px;
+  width: 100%;
+}
+
+footer li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 10px 20px;
+  color: #FFF;
+  font-weight: normal;
+}
+
+footer a {
+  text-decoration: none;
+  color: #FFF;
+}
+footer a:hover {
+  color: #FF79DA;
+}
+
+footer .titre {
+  font-family: "Shrikhand", cursive;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.fa-utensils {
+  padding-right: 13px;
+}
+
+.fa-handshake-angle {
+  padding-right: 8px;
 }
