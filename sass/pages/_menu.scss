@@ -1,4 +1,4 @@
-/* Image Restaurant */
+/* Start Menu Restaurant */
 
 .menu {
     display: flex;
@@ -26,25 +26,43 @@
     }
 
     &__card {
+        display: flex;
+        flex-flow: wrap;
         margin-bottom: 30px;
 
         &__list {
-            width: 100%;
+            height: 70px;
             padding: 15px;
             background-color: #fff;
             border-radius: 15px;
             box-shadow: 0em 0.25em 0.75em rgba(0, 0, 0, 10%);
             margin: auto;
             margin-bottom: 20px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+            @media (max-width:700px) {
+                width: 100%;
+            }
+
+            @media (min-width:701px) and (max-width:1000px) {
+                width: 70%;
+            }
+
+            @media (min-width:1001px) {
+                width: 30%;
+            }
         }
+
 
         &__price {
             display: flex;
             justify-content: space-between;
+            text-overflow: ellipsis;
         }
     }
 
-    a {
+    &__button {
         font-size: 15px;
         color: #FFF;
         background-image: linear-gradient($color-secondary, $color-primary);
@@ -55,7 +73,12 @@
         margin-top: 28px;
         margin-bottom: 23px;
     }
+
+    .fa-heart {
+        margin-left: 2em;
+    }
 }
+
 
 .entrees {
     margin-bottom: 27px;
@@ -68,3 +91,5 @@
 .desserts {
     margin-bottom: 27px;
 }
+
+/* End Menu Restaurant */
