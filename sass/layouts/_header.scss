@@ -11,7 +11,11 @@ header {
         justify-content: center;
         align-items: center;
 
-        & .fa-arrow-left {}
+        & .fa-arrow-left {
+            position: absolute;
+            left: 30px;
+            top: 50%;
+        }
 
         & img {
             width: 180px;

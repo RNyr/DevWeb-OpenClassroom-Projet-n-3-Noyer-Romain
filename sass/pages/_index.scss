@@ -39,6 +39,7 @@
         margin-bottom: 20px;
 
         &:hover {
+            opacity: 70%;
             box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
         }
     }
@@ -63,7 +64,9 @@
     font-size: 15px;
     padding: 0px 15px;
 
-    button {
+    &__fonction {
+        position: relative;
+        text-align: center;
         width: 330px;
         font-weight: bold;
         background-color: #F6F6F6;
@@ -73,12 +76,26 @@
         padding: 30px 50px 30px 18px;
         margin: 0px 20px 20px 20px;
 
-        &:hover {
-            background-color: #f5edff;
+
+        &__numero {
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            padding: 3px 0px;
+            border-radius: 50%;
+            background-color: $color-primary;
+            color: #FFF;
+            margin: auto;
+            left: -10px;
+            top: 25px;
         }
 
-        &:hover .fa-solid {
-            color: $color-primary;
+        &:hover {
+            background-color: #f5edff;
+
+            .fa-solid {
+                color: $color-primary;
+            }
         }
 
         @media (max-width:700px) {
@@ -159,6 +176,18 @@
     &__image {
         width: 100%;
         height: 175px;
+        position: relative;
+
+        &__bouton {
+            font-weight: bold;
+            background-color: $color-tertiary;
+            color: #1b6150;
+            padding: 8px 10px;
+            border-radius: 3px;
+            position: absolute;
+            top: 12px;
+            right: 12px;
+        }
 
         img {
             width: 100%;
@@ -167,7 +196,6 @@
             border-top-left-radius: 15px;
             border-top-right-radius: 15px;
         }
-
     }
 
     &__body {
@@ -176,6 +204,7 @@
         justify-content: space-between;
         padding: 20px;
     }
+
 }
 
 /* End Restaurants */

@@ -46,6 +46,11 @@ header .logo {
       -ms-flex-align: center;
           align-items: center;
 }
+header .logo .fa-arrow-left {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+}
 header .logo img {
   width: 180px;
 }
@@ -100,6 +105,7 @@ header .logo img {
   margin-bottom: 20px;
 }
 .accueil a:hover {
+  opacity: 70%;
   -webkit-box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
           box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
 }
@@ -125,7 +131,9 @@ header .logo img {
   font-size: 15px;
   padding: 0px 15px;
 }
-.fonctionnement button {
+.fonctionnement__fonction {
+  position: relative;
+  text-align: center;
   width: 330px;
   font-weight: bold;
   background-color: #F6F6F6;
@@ -136,28 +144,40 @@ header .logo img {
   padding: 30px 50px 30px 18px;
   margin: 0px 20px 20px 20px;
 }
-.fonctionnement button:hover {
+.fonctionnement__fonction__numero {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  padding: 3px 0px;
+  border-radius: 50%;
+  background-color: #9356DC;
+  color: #FFF;
+  margin: auto;
+  left: -10px;
+  top: 25px;
+}
+.fonctionnement__fonction:hover {
   background-color: #f5edff;
 }
-.fonctionnement button:hover .fa-solid {
+.fonctionnement__fonction:hover .fa-solid {
   color: #9356DC;
 }
 @media (max-width: 700px) {
-  .fonctionnement button {
+  .fonctionnement__fonction {
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
   }
 }
 @media (min-width: 701px) and (max-width: 1000px) {
-  .fonctionnement button {
+  .fonctionnement__fonction {
     width: 80%;
     margin: auto;
     margin-bottom: 20px;
   }
 }
 @media (min-width: 1001px) {
-  .fonctionnement button {
+  .fonctionnement__fonction {
     width: 30%;
     margin: auto;
     margin-bottom: 20px;
@@ -228,6 +248,17 @@ header .logo img {
 .card__image {
   width: 100%;
   height: 175px;
+  position: relative;
+}
+.card__image__bouton {
+  font-weight: bold;
+  background-color: #99E2D0;
+  color: #1b6150;
+  padding: 8px 10px;
+  border-radius: 3px;
+  position: absolute;
+  top: 12px;
+  right: 12px;
 }
 .card__image img {
   width: 100%;
@@ -272,12 +303,25 @@ header .logo img {
   width: 100%;
   height: 250px;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .menu__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   font-family: "Shrikhand", cursive;
   font-size: 26px;
   margin-bottom: 25px;
+}
+@media (min-width: 701px) {
+  .menu__title {
+    -ms-flex-item-align: center;
+        align-self: center;
+    gap: 40px;
+  }
 }
 .menu__card {
   display: -webkit-box;
@@ -286,6 +330,74 @@ header .logo img {
   -ms-flex-flow: wrap;
       flex-flow: wrap;
   margin-bottom: 30px;
+}
+@-webkit-keyframes menuanim {
+  from {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin-top: 1em;
+    opacity: 0;
+  }
+  to {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin-top: 0em;
+    opacity: 1;
+  }
+}
+@keyframes menuanim {
+  from {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin-top: 1em;
+    opacity: 0;
+  }
+  to {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    margin-top: 0em;
+    opacity: 1;
+  }
+}
+.menu__card__1 {
+  -webkit-animation: menuanim 1s;
+          animation: menuanim 1s;
+}
+.menu__card__2 {
+  -webkit-animation: menuanim 1.5s;
+          animation: menuanim 1.5s;
+}
+.menu__card__3 {
+  -webkit-animation: menuanim 2s;
+          animation: menuanim 2s;
+}
+.menu__card__4 {
+  -webkit-animation: menuanim 2.5s;
+          animation: menuanim 2.5s;
+}
+.menu__card__5 {
+  -webkit-animation: menuanim 3s;
+          animation: menuanim 3s;
+}
+.menu__card__6 {
+  -webkit-animation: menuanim 3.5s;
+          animation: menuanim 3.5s;
+}
+.menu__card__7 {
+  -webkit-animation: menuanim 4s;
+          animation: menuanim 4s;
+}
+.menu__card__8 {
+  -webkit-animation: menuanim 4.5s;
+          animation: menuanim 4.5s;
+}
+.menu__card__9 {
+  -webkit-animation: menuanim 5s;
+          animation: menuanim 5s;
+}
+.menu__card__10 {
+  -webkit-animation: menuanim 5.5s;
+          animation: menuanim 5.5s;
 }
 .menu__card__list {
   height: 70px;
@@ -336,20 +448,27 @@ header .logo img {
   margin-top: 28px;
   margin-bottom: 23px;
 }
+.menu__button:hover {
+  opacity: 70%;
+  -webkit-box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
+          box-shadow: 0em 0.25em 1.5em rgba(0, 0, 0, 0.75);
+}
 .menu .fa-heart {
-  margin-left: 2em;
+  margin-right: 0.5em;
+  margin-top: 5px;
+  cursor: pointer;
 }
-
-.entrees {
+.menu .fa-heart:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
+  background-image: linear-gradient(#FF79DA, #9356DC);
+}
+.menu h2 {
   margin-bottom: 27px;
 }
-
-.plats {
-  margin-bottom: 27px;
-}
-
-.desserts {
-  margin-bottom: 27px;
+@media (min-width: 701px) {
+  .menu h2 {
+    text-align: center;
+  }
 }
 
 /* End Menu Restaurant */
