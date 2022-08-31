@@ -11,6 +11,27 @@
     padding: 35px 15px;
     margin-top: -35px;
 
+    h2 {
+        font-weight: normal;
+        position: relative;
+        text-transform: uppercase;
+        padding-bottom: 15px;
+
+        &::after {
+            content: "";
+            width: 60px;
+            height: 4px;
+            background-color: $color-tertiary;
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+
+            @media (min-width:701px) {
+                width: 100%;
+            }
+        }
+    }
+
     &__image {
         img {
             width: 100%;
@@ -23,9 +44,14 @@
     &__title {
         display: flex;
         justify-content: space-between;
-        font-family: 'Shrikhand', cursive;
+        align-items: center;
         font-size: 26px;
         margin-bottom: 25px;
+
+
+        h1 {
+            font-family: 'Shrikhand', cursive;
+        }
 
         @media (min-width:701px) {
             align-self: center;
@@ -141,16 +167,6 @@
         }
     }
 
-    .fa-heart {
-        margin-right: 0.5em;
-        margin-top: 5px;
-        cursor: pointer;
-
-        &:hover {
-            background-image: linear-gradient($color-secondary, $color-primary);
-        }
-    }
-
     h2 {
         margin-bottom: 27px;
 
@@ -161,5 +177,49 @@
     }
 }
 
+@keyframes heart {
+    0% {
+        transform: translate(30px);
+        color: #FFF;
+    }
+
+    50% {
+        transform: translate(30px);
+        color: $color-secondary;
+    }
+
+    100% {
+        transform: translate(30px);
+        color: $color-secondary;
+    }
+}
+
+.favori {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    &:hover i.fas.fa-heart.full {
+        position: absolute;
+        right: 30px;
+        animation: heart 1s cubic-bezier(0.50, 0, 0.50, 1) forwards;
+        visibility: visible;
+    }
+
+    &:hover i.far.fa-heart.empty {
+        visibility: hidden;
+    }
+
+    i.far.fa-heart.empty {
+        visibility: visible;
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    i.fas.fa-heart.full {
+        position: absolute;
+        right: 30px;
+        visibility: hidden;
+    }
+}
 
 /* End Menu Restaurant */

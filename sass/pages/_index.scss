@@ -120,7 +120,8 @@
 }
 
 .fa-solid {
-    padding-right: 15px;
+    position: absolute;
+    left: 40px;
 }
 
 /* End Fonctionnement */
@@ -171,6 +172,10 @@
 
     @media (min-width: 1251px) {
         width: 22%;
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 
     &__image {
