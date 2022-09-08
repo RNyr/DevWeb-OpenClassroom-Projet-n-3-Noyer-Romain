@@ -1,0 +1,43 @@
+@keyframes heart {
+    0% {
+        transform: translate(30px);
+        color: #FFF;
+    }
+
+    50% {
+        transform: translate(30px);
+        color: $secondary;
+    }
+
+    100% {
+        transform: translate(30px);
+        color: $secondary;
+    }
+}
+
+.favori {
+    display: flex;
+    position: relative;
+    cursor: pointer;
+
+    i.far.fa-heart.empty {
+        visibility: visible;
+    }
+
+    i.fas.fa-heart.full {
+        position: absolute;
+        right: 30px;
+        visibility: hidden;
+    }
+
+    &:hover i.fas.fa-heart.full {
+        position: absolute;
+        right: 30px;
+        animation: heart 1s cubic-bezier(0.50, 0, 0.50, 1) forwards;
+        visibility: visible;
+    }
+
+    &:hover i.far.fa-heart.empty {
+        visibility: hidden;
+    }
+}

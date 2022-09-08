@@ -39,9 +39,9 @@
     &--circle {
         width: 150px;
         height: 150px;
-        border: 15px solid $color-tertiary;
-        border-top: 15px solid $color-primary;
-        border-bottom: 15px solid $color-secondary;
+        border: 15px solid $tertiary;
+        border-top: 15px solid $primary;
+        border-bottom: 15px solid $secondary;
         border-radius: 100%;
         animation: rotation 1s infinite;
     }

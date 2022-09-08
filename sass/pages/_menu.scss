@@ -3,13 +3,30 @@
 .menu {
     display: flex;
     flex-direction: column;
-    background-color: $color-background;
+    background-color: $grey;
     z-index: 1;
     border-top-left-radius: 35px;
     border-top-right-radius: 35px;
     position: relative;
     padding: 35px 15px;
     margin-top: -35px;
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 26px;
+        margin-bottom: 25px;
+
+        h1 {
+            font-family: 'Shrikhand', cursive;
+        }
+
+        @media (min-width:701px) {
+            align-self: center;
+            gap: 40px;
+        }
+    }
 
     h2 {
         font-weight: normal;
@@ -21,7 +38,7 @@
             content: "";
             width: 60px;
             height: 4px;
-            background-color: $color-tertiary;
+            background-color: $tertiary;
             position: absolute;
             left: 0px;
             bottom: 0px;
@@ -41,27 +58,11 @@
         }
     }
 
-    &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 26px;
-        margin-bottom: 25px;
-
-
-        h1 {
-            font-family: 'Shrikhand', cursive;
-        }
-
-        @media (min-width:701px) {
-            align-self: center;
-            gap: 40px;
-        }
-    }
-
     &__card {
         display: flex;
         flex-flow: wrap;
+        max-width: 350px;
+        margin: auto;
         margin-bottom: 30px;
 
         @keyframes menuanim {
@@ -118,42 +119,119 @@
             animation: menuanim 5.5s;
         }
 
+
         &__list {
+            background-color: #FFF;
             height: 70px;
-            padding: 15px;
-            background-color: #fff;
-            border-radius: 15px;
             box-shadow: 0em 0.25em 0.75em rgba(0, 0, 0, 10%);
+            border-radius: 15px;
             margin: auto;
             margin-bottom: 20px;
-            overflow: hidden;
-            text-overflow: ellipsis;
-
-            @media (max-width:700px) {
-                width: 100%;
-            }
-
-            @media (min-width:701px) and (max-width:1000px) {
-                width: 70%;
-            }
-
-            @media (min-width:1001px) {
-                width: 30%;
-            }
-        }
-
-
-        &__price {
+            padding-left: 15px;
             display: flex;
             justify-content: space-between;
-            text-overflow: ellipsis;
+            overflow: hidden;
+
+
+
+            li {
+                display: flex;
+                justify-content: space-between;
+            }
+
+
+            &__content {
+                width: 350px;
+                padding: 14px 0;
+                border-radius: .75rem;
+                display: flex;
+                justify-content: space-between;
+
+                h3 {
+                    font-size: 16px;
+                }
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                &__price {
+                    display: flex;
+                    align-items: flex-end;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+
+                &__menu {
+                    width: 230px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    text-overflow: ellipsis;
+
+                    h3 {
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden;
+                    }
+
+                    h4 {
+                        font-weight: normal;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                        white-space: nowrap;
+                    }
+                }
+
+            }
+
+            &:hover {
+                .menu__card__list__anim {
+                    margin-right: 0px;
+                    min-width: 4rem;
+                    transition: margin-right 0.5s;
+                }
+
+                .menu__card__list__content__menu {
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+
+                }
+
+                .menu__card__list__anim__check {
+                    transform: rotate(360deg);
+                }
+
+            }
+
+            &__anim {
+                background-color: $tertiary;
+                min-width: 4rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-right: -64px;
+
+                &__check {
+                    width: 25px;
+                    height: 25px;
+                    background: #FFF;
+                    color: #99E2D0;
+                    border-radius: 100%;
+                    display: flex;
+                    align-items: center;
+                    transition: transform 0.75s;
+
+                }
+            }
         }
     }
 
     &__button {
         font-size: 15px;
         color: #FFF;
-        background-image: linear-gradient($color-secondary, $color-primary);
+        background-image: linear-gradient($secondary, $primary);
         box-shadow: 0em 0.25em 1em rgba(0, 0, 0, 0.25);
         border-radius: 30px;
         padding: 1em 3em 1em 3em;
@@ -174,51 +252,6 @@
             text-align: center;
 
         }
-    }
-}
-
-@keyframes heart {
-    0% {
-        transform: translate(30px);
-        color: #FFF;
-    }
-
-    50% {
-        transform: translate(30px);
-        color: $color-secondary;
-    }
-
-    100% {
-        transform: translate(30px);
-        color: $color-secondary;
-    }
-}
-
-.favori {
-    display: flex;
-    position: relative;
-    cursor: pointer;
-
-    &:hover i.fas.fa-heart.full {
-        position: absolute;
-        right: 30px;
-        animation: heart 1s cubic-bezier(0.50, 0, 0.50, 1) forwards;
-        visibility: visible;
-    }
-
-    &:hover i.far.fa-heart.empty {
-        visibility: hidden;
-    }
-
-    i.far.fa-heart.empty {
-        visibility: visible;
-        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    i.fas.fa-heart.full {
-        position: absolute;
-        right: 30px;
-        visibility: hidden;
     }
 }
 
