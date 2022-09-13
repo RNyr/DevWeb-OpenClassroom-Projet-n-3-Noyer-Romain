@@ -30,7 +30,7 @@
 
     a {
         font-size: 15px;
-        color: #FFF;
+        color: $white;
         background-image: linear-gradient($secondary, $primary);
         box-shadow: 0em 0.25em 1em rgba(0, 0, 0, 0.25);
         border-radius: 30px;
@@ -83,7 +83,7 @@
             padding: 3px 0px;
             border-radius: 50%;
             background-color: $primary;
-            color: #FFF;
+            color: $white;
             margin: auto;
             left: -10px;
             top: 25px;
@@ -159,7 +159,7 @@
     width: 355px;
     height: 250px;
     box-shadow: 0em 0.25em 0.5em rgba(0, 0, 0, 0.25);
-    background-color: #FFF;
+    background-color: $white;
     border-radius: 15px;
     margin: auto;
     margin-bottom: 20px;
