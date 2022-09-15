@@ -1,17 +1,22 @@
-@keyframes heart {
+@keyframes heartfull {
     0% {
-        transform: translate(30px);
-        color: $white;
+        opacity: 0;
+    }
+
+    25% {
+        opacity: 0.25;
     }
 
     50% {
-        transform: translate(30px);
-        color: $secondary;
+        opacity: 0.5;
+    }
+
+    75% {
+        opacity: 0.75;
     }
 
     100% {
-        transform: translate(30px);
-        color: $secondary;
+        opacity: 1;
     }
 }
 
@@ -20,24 +25,29 @@
     position: relative;
     cursor: pointer;
 
-    i.far.fa-heart.empty {
+    .empty {
+        font-size: 30px;
         visibility: visible;
     }
 
-    i.fas.fa-heart.full {
+    .full {
+        font-size: 30px;
         position: absolute;
-        right: 30px;
         visibility: hidden;
     }
 
-    &:hover i.fas.fa-heart.full {
+    &:hover .empty {
+        font-size: 30px;
+        visibility: hidden;
+    }
+
+    &:hover .full {
+        font-size: 30px;
         position: absolute;
-        right: 30px;
-        animation: heart 1s cubic-bezier(0.50, 0, 0.50, 1) forwards;
+        animation: heartfull 1s cubic-bezier(.35, 0, 1, .4) forwards;
         visibility: visible;
-    }
-
-    &:hover i.far.fa-heart.empty {
-        visibility: hidden;
+        color: transparent;
+        background: linear-gradient($secondary, $primary);
+        background-clip: text;
     }
 }
